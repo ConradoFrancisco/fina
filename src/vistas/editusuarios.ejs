@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">Crud con node js y conexion a Mysql</a>
+        
+    </nav>
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                    <form action="/update/<%= data.id_empleado %>" method="post">
+                        <div class="form-group">
+                            <input type="text" name="nombre" value="<%= data.nombre %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="apellido" value="<%= data.apellido %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="edad" value="<%= data.edad %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="telefono" value="<%= data.telefono %>" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="id_sucursal" value="<%= data.id_sucursal %>" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Editar Usuario</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

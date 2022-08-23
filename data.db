@@ -1,0 +1,33 @@
+create database usuariosEmpleadosSucursales;
+use usuariosEmpleadosSucursales;
+create table usuarios(
+	id int unsigned key auto_increment ,
+	username VARCHAR(20),
+    password VARCHAR(30),
+    Nombre VARCHAR(30),
+    Apellido VARCHAR(40)
+);
+
+create table empleados (
+	id_empleado int(10) unsigned PRIMARY KEY auto_increment,
+    nombre VARCHAR(30),
+    apellido VARCHAR(30),
+    edad int(11),
+    telefono VARCHAR(20),
+    id_sucursal int(11) not null 
+
+);
+
+describe empleados;
+
+create table sucursales(
+	id int unsigned primary key not null auto_increment,
+    nombre VARCHAR(20) not null,
+    localidad VARCHAR(20) not null
+);
+
+describe sucursales;
+
+insert into empleados values (
+	1,"conrado","llanos",45,"1546534640",3
+);
